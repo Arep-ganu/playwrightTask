@@ -1,6 +1,6 @@
-import { test, expect } from '../fixtures/fixtures'
-import { LoginPage } from '../pom/login'
-import { InventoryPage } from '../pom/inventory'
+import { test, expect } from '../fixtures/fixtures2'
+import { LoginPage } from '../pom/login2'
+import { InventoryPage } from '../pom/inventory2'
 
 test('standard_user wrong password', async ({ loginPage }) => {
     await loginPage.goTo()
@@ -37,3 +37,4 @@ test('performance_glitch_user', async ({ loginPage, inventoryPage }) => {
     expect(duration).toBeLessThan(1000)
 
 })
+
