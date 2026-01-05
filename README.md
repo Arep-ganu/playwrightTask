@@ -50,6 +50,7 @@ Tests are independent and do not rely on execution order.
 
 ### Prerequisites
 - Node.js (LTS version recommended)
+- TypeScript (installed as a project dependency)
 
 ### Installation & Execution
 
