@@ -14,17 +14,20 @@ All tests are runnable using a single command.
 
 ## 📋 Assessment Coverage
 
-### Part 1 – Saucedemo (Authentication)
-- Login validation with valid and invalid credentials
-- Error message assertions
-- Role- and ID-based locators (no `testId` usage)
+### Part 1 – Saucedemo (Shopping Cart & Checkout)
+- Login with `standard_user` credentials
+- Add 3 items to cart (T-Shirt, Fleece Jacket, Onesie)
+- Cart badge validation
+- Checkout form validation (empty form error handling)
+- Order overview verification (item total, tax, final total)
+- Success page confirmation
 
-### Part 2 – Saucedemo (Inventory, Cart & Checkout)
-- Product sorting validation (A–Z, Z–A, price)
-- Add-to-cart and cart verification
-- Checkout flow (information → overview → success)
-- Assertions on UI state and order completion
-- Performance-related assertion included as an edge case
+### Part 2 – Saucedemo (Authentication & Sorting)
+- Login validation with invalid credentials (wrong password, empty password)
+- `locked_out_user` error message verification
+- `performance_glitch_user` login and product sorting tests
+- Sort validation: Price (Low to High), Name (Z to A), Name (A to Z)
+- Performance assertion test (expected to fail as edge case)
 
 ### Part 3 – Ant Design Form Validation
 - Required field validation (invalid submission)
@@ -82,14 +85,28 @@ npx playwright test --debug
 npx playwright show-report
 ```
 
+## 🌐 Test URLs
+
+- **Part 1 & 2:** https://saucedemo.com
+- **Part 3:** https://ant-design-form-test.harith-610.workers.dev
+
 ## 📝 Environment Variables
 
 Create a `.env` file in the root directory:
 
 ```env
-SAUCEDEMO_USERNAME=your_username
-SAUCEDEMO_PASSWORD=your_password
+SAUCEDEMO_USERNAME=standard_user
+SAUCEDEMO_PASSWORD=secret_sauce
 ```
+
+## ✅ Key Requirements
+
+- ✅ Playwright with TypeScript
+- ✅ Page Object Model (POM) architecture
+- ✅ Fixtures for reusability
+- ✅ Role and ID-based locators (no `testId`)
+- ✅ Proper `playwright.config.ts` configuration
+- ✅ All tests runnable with single command
 
 ## ✅ Test Results
 
