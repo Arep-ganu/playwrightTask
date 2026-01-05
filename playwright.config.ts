@@ -13,7 +13,7 @@ import 'dotenv/config'
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  workers: 2,
+  workers: 1,
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
