@@ -41,7 +41,7 @@ export class BookingInformation {
     }
 
     async goTo() {
-        await this.page.goto('/')
+        await this.page.goto('https://ant-design-form-test.harith-610.workers.dev/')
     }
 
     async bruteForceInvalidInputs() {
@@ -75,4 +75,5 @@ export class BookingInformation {
 
         await this.nextButton.click()
     }
+
 }
