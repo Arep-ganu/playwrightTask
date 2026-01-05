@@ -1,6 +1,6 @@
 import { test as base } from '@playwright/test'
-import { InventoryPage } from '../pom/inventory'
-import { LoginPage } from '../pom/login'
+import { InventoryPage } from '../pom/inventory2'
+import { LoginPage } from '../pom/login2'
 export { expect } from '@playwright/test'
 
 type MyFixtures = {
@@ -20,3 +20,4 @@ export const test = base.extend<MyFixtures>({
     },
 
 })
+
